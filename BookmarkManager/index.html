@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>New tab</title>
+    <!--style-->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <!--scripts-->
+    <!--<script src="scripts/time.js"></script>
+
+    <script src="scripts/save_tabs.js" defer></script>
+    <script src="scripts/modal_window_scripts.js" defer></script>
+-->
+
+
+</head>
+<body id="body">
+
+<div class="container">
+
+    <div class="time">
+        <p id="out_time"></p>
+    </div>
+
+    <div class="bookmark-main-block">
+        <div id="added_tabs_main_block">
+            <!--EXAMPLE__________________________________-->
+            <!--
+            <div class="tab" id="tab" title="Facebook">
+                <a href="http://facebook.com"><img src="http://www.google.com/s2/favicons?domain=facebook.com" alt=""></a>
+            </div>
+            <div class="tab" id="" title="YouTube">
+                <a href="http://youtube.com"><img src="http://www.google.com/s2/favicons?domain=youtube.com" alt=""></a>
+            </div>
+            -->
+            <!--__________________________________EXAMPLE-->
+
+            <div id="add_element">
+                <div class="add_button_wrapper">
+                    <button id="add_button" title="Add new tab"></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="modal_container-add">
+        <div class="main_modal-add">
+            <button id="close_modal_butt1"><img src="images/close_icon.svg" alt=""></button>
+            <p style="padding-top: 5px;">Name: </p><input id="input_name" type="text">
+            <p style="margin-top: 20px;">Address: </p><input id="input_address" type="text" placeholder="https://yourawesomesite.com" title='Must be written - "http://" or "https://"'>
+            <button id="confirm_add_button" type="button">Add</button>
+        </div>
+    </div>
+
+    <div id="modal_container-change">
+        <div class="main_modal-change">
+            <button id="close_modal_butt2"><img src="images/close_icon.svg" alt=""></button>
+            <button id="back"><img src="images/back_icon.svg" alt=""></button>
+            <p>Change a <span id="tab_name"></span></p>
+            <button id="change_button">Change</button>
+            <button id="delete_button">Delete</button>
+            <div id="changed_block-selected-wrapper">
+                <div class="changed_block-selected">
+                    <p style="padding-top: 15px;">Name: </p><input id="change_name" type="text">
+                    <p style="margin-top: 20px;">Address: </p><input id="change_address" type="text">
+                    <button id="confirm_change_button">Change</button>
+                </div>
+            </div>
+            <div id="delete_block-selected">
+                <div class="delete_block">
+                    <p>Are you sure you want to delete this tab?</p>
+                    <button id="delete_yes">Yes</button>
+                    <button id="delete_no">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="change_bg_butt_container">
+    <button id="change_bg_butt" title="Change background"></button>
+</div>
+<!--
+<div id="modal_container_change_bg">
+    <div class="main_modal_change_bg">
+        <button id="close_modal_butt3"><img src="images/close_icon.svg" alt=""></button>
+        <p class="warning_p">Image should be more than 1920x1080, and image should be in landscape orientation. If this rule ignore, the consequences may be unexpected.</p>
+        <p style="padding-top: 5px;">Image URL: </p><input id="input_image_url" type="text">
+        <button id="confirm_change_bg" type="button">Change</button>
+    </div>
+</div>-->
+
+<div id="modal_container_change_bg">
+    <div class="main_modal_change_bg">
+        <button id="close_modal_butt3"><img src="images/close_icon.svg" alt=""></button>
+        <button id="back2"><img src="images/back_icon.svg" alt=""></button>
+        <div id="choose_type">
+            <p>Choose change background type:</p>
+            <button id="type_url">URL address</button>
+            <button id="set_default_bg">Set default</button>
+            <button id="type_upload" disabled title="Coming soon">Upload from computer</button>
+        </div>
+        <div id="selected_type_url">
+            <div class="selected_change_block_url">
+                <p class="warning_p">Image should be more than 1920x1080, and image should be in landscape orientation. If this rule ignore, the consequences may be unexpected.</p>
+                <p style="padding-top: 5px;">Image URL: </p>
+                <input id="input_image_url" type="text">
+                <button id="confirm_change_bg_url" type="button">Change</button>
+            </div>
+        </div>
+        <!-- ------------------don`t WORKED-->
+        <div id="selected_type_upload">
+            <div class="selected_change_block_upload">
+                <p class="warning_p">Image should be more than 1920x1080, and image should be in landscape orientation. If this rule ignore, the consequences may be unexpected.</p>
+                <p>Choose background in your computer</p>
+                <input id="input_image_upload" type="file" accept=".jpg, .jpeg, .png">
+                <button id="confirm_change_bg_upload" type="button">Change</button>
+            </div>
+        </div>
+        <!-- ------------------don`t WORKED-->
+    </div>
+</div>
+
+
+
+<!--scripts-->
+<script src="scripts/time.js"></script>
+
+<script src="scripts/save_tabs.js" defer></script>
+<script src="scripts/modal_window_scripts.js" defer></script>
+
+<script src="scripts/change_bg.js" defer></script>
+<!--scripts-->
+
+
+</body>
+</html>
